@@ -299,7 +299,7 @@ exports.listSearch = (req, res) => {
     if (search) {
         Blog.find(
             {
-                $or: [{ title: { $regex: search, $options: 'i' } }, { body: { $regex: search, $options: 'i' } }]
+                 title: { $regex: search, $options: 'i' } 
             },
             (err, blogs) => {
                 if (err) {

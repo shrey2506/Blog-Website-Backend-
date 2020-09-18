@@ -41,6 +41,7 @@ exports.read = (req, res) => {
             });
         }
         Blog.find({tags: tag})
+        .populate('blogs', '_id name slug')
         .populate('categories', '_id name slug')
         .populate('tags', '_id name slug')
         .populate('postedBy', '_id name')
