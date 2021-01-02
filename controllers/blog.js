@@ -24,7 +24,7 @@ exports.create = (req, res) => {
 
         if (!title || !title.length) {
             return res.status(400).json({
-                error: 'title is required'
+                error: 'Title is required'
             });
         }
 
